@@ -122,4 +122,19 @@ body, h1, p {
   body {
     cursor: url('mycursor.png'), auto;
   }
+  .back-button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-button:hover {
+    background-color: #2980b9;
+  }
   
