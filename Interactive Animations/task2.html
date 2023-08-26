@@ -15,10 +15,10 @@
   
 <body>
   <header class="header">CSS Task 2 </header>
+  
   <main class="main-content">
-    <button class="interactive-button">Hover Me</button>
     <div class="slider-container">
-      <input type="range" class="slider" value="50">
+      <input type="range" class="slider" value="50" id="rotationSpeedSlider">
     </div>
     <div class="toggle-container">
       <input type="checkbox" class="toggle">
@@ -26,22 +26,30 @@
     </div>
     
     <button class="back-button" onclick="goToTask1()">Back to Task 1</button>
-
+    
   </main>
-  <section class="pseudo-section">
-    <div class="decorative-box"></div>
-  </section>
   <section class="_3d-section">
-    <div class="cube">
-      <div class="face front">Front</div>
-      <div class="face back">Back</div>
-      <div class="face top">Top</div>
-      <div class="face bottom">Bottom</div>
-      <div class="face left">Left</div>
-      <div class="face right">Right</div>
+    <div class="wrapper">
+      <div class="cube">
+        <div class="face front">Front</div>
+        <div class="face back">Back</div>
+        <div class="face top">Top</div>
+        <div class="face bottom">Bottom</div>
+        <div class="face left">Left</div>
+        <div class="face right">Right</div>
+      </div>
     </div>
   </section>
   
-  <footer class="footer">Custom Cursors</footer>
+  <footer class="footer">Footer</footer>
+  <script>
+    const rotationSpeedSlider = document.getElementById('rotationSpeedSlider');
+    const cube = document.querySelector('.cube');
+
+    rotationSpeedSlider.addEventListener('input', () => {
+      const rotationSpeed = rotationSpeedSlider.value; // Get the slider value
+      cube.style.transform = `rotateX(${rotationSpeed}deg) rotateY(${rotationSpeed}deg) rotateZ(${rotationSpeed}deg)`;
+    });
+  </script>
 </body>
 </html>
