@@ -97,7 +97,7 @@ body, h1, p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 39.6vh; /* Adjust the height as needed */
+    height: 40vh; /* Adjust the height as needed */
   }
   
   .cube {
@@ -105,7 +105,7 @@ body, h1, p {
     height: 200px;
     transform: rotateX(0) rotateY(0) rotateZ(0);
     transform-style: preserve-3d;
-    animation: rotate 5s infinite linear;
+    animation: rotate 10s infinite linear;
   }
   
   
